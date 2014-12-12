@@ -11,6 +11,15 @@
             "email": "dz@heroku.com"
         }
     ],
+    "repositories": [
+      {
+        "type": "pear",
+        "url": "http://pear.php.net"
+      }
+    ],
+    "require": { 
+      "pear-pear/Mail": ">=1.2.0"
+    },
     "bin": [
         "bin/heroku-hhvm-apache2",
         "bin/heroku-hhvm-nginx",
