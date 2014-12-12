@@ -178,6 +178,10 @@ if [[ "${PHP_VERSION}" ]]; then
     # store PHP version in the slug for possible later evaluation
     mkdir -p $BUILD_DIR/.heroku/php/.versions/php
     echo $PHP_VERSION > $BUILD_DIR/.heroku/php/.versions/php/php
+    
+    pear install mail
+    pear install Net_SMTP
+
 fi
 if [[ "${HHVM_VERSION}" ]]; then
     HHVM_DIST_URL="$S3_URL/hhvm-$HHVM_VERSION.tar.gz"
